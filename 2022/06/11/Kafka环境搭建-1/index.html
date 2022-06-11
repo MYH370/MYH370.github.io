@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Kafka环境搭建 | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+<meta name="generator" content="Hexo 6.2.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+          <a class="main-nav-link" href="/categories">Categories</a>
+        
+          <a class="main-nav-link" href="/tags">Tags</a>
+        
+          <a class="main-nav-link" href="/about">About</a>
+        
+      </nav>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-Kafka环境搭建-1" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2022/06/11/Kafka%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA-1/" class="article-date">
+  <time class="dt-published" datetime="2022-06-11T04:43:53.000Z" itemprop="datePublished">2022-06-11</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="p-name article-title" itemprop="headline name">
+      Kafka环境搭建
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p><strong>长春建筑学院</strong></p>
+<p><strong>《kafka应用实训》</strong></p>
+<p><strong>选题及任务书</strong></p>
+<p>人工智能产业学院<br><strong>一、课程设计选题</strong></p>
+<p><strong>项目一：在个人博客中继续发布kafka相应学习内容（必选）</strong></p>
+<p>1．项目来源及背景</p>
+<p>随着协同办公的迅速发展，掌握分布式的版本控制方法成为了必然要求。如何使用当今最为流行的Github进行版本控制也成为了大数据专业人才的必要条件。本项目旨在让学生学会Git的同时，掌握Github的基本操作，并可以使用简单的建站工具在Github上进行个人博客的部署，完成相应的知识输出。</p>
+<p>2．项目需求分析</p>
+<p>（1）个人博客采用Hexo进行相应搭建。地址：<a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/">https://hexo.io/zh-cn/</a></p>
+<p>（2）在使用Hexo前，需要安装node和npm。</p>
+<p>（3）使用Hexo，选择相应的主题进行博客搭建。</p>
+<p>（4）具体搭建步骤在如下示例中。</p>
+<p>示例：<a target="_blank" rel="noopener" href="https://skykip.github.io/2022/04/10/hello-world/">https://skykip.github.io/2022/04/10/hello-world/</a></p>
+<p>所采用主题为：Wikitten</p>
+<p><strong>（5）请各位同学在已经搭建完成的个人博客中，将之前kafka课程中做的分组任务（Kafka全流程配置与应用），以博文的形式发布到自己的博客中进行分享。</strong></p>
+<p>其中：</p>
+<p>a) Kafka环境配置作为一篇博文，</p>
+<p>名称为：《Kafka环境配置》</p>
+<p>b) Kafka命令行操作作为一篇博文，</p>
+<p>名称为：《Kafka命令行操作》</p>
+<p>c) 生产者API，消费者API，Topic管理API作为一篇博文，</p>
+<p>名称为：《kafka API使用方法》</p>
+<p><strong>项目二：在kafka集群中部署Eagle运维监控（必选）</strong></p>
+<p>1．项目来源及背景</p>
+<p>kafka 自身并没有继承监控管理系统, 因此对 kafka 的监控管理比较不便, 好在有大量的第三方监控管理系统来使用,常见的有: </p>
+<p>l Kafka Eagle </p>
+<p>l KafkaOffsetMonitor </p>
+<p>l Kafka Manager(雅虎开源的 Kafka 集群管理器) </p>
+<p>l Kafka Web Console </p>
+<p>l 还有 JMX 接口自开发监控管理系统</p>
+<p>其中，Kafka Eagle最为流行，本项目则希望同学们可以成功部署Kafka Eagle，完成对kafka集群的基本监控。</p>
+<p><img src="file:///C:\Users\雷神\AppData\Local\Temp\ksohtml9240\wps29.jpg" alt="img"> </p>
+<p>2．系统需求分析</p>
+<p>官网：<a target="_blank" rel="noopener" href="https://www.kafka-eagle.org/">https://www.kafka-eagle.org/</a></p>
+<p>（1） 安装包下载地址: </p>
+<p><a target="_blank" rel="noopener" href="https://github.com/smartloli/kafka-eagle-bin/">https://github.com/smartloli/kafka-eagle-bin/</a>		</p>
+<p><strong>（安装包也已上传至学习通的资料中）</strong></p>
+<p>（2） 上传安装包，解压</p>
+<p>（3） 配置环境变量:JAVA_HOME 和 KE_HOME</p>
+<p>vi &#x2F;etc&#x2F;profile </p>
+<p>export JAVA_HOME&#x3D;&#x2F;usr&#x2F;java&#x2F;jdk1.8</p>
+<p>export PATH&#x3D;$PATH:$JAVA_HOME&#x2F;bin</p>
+<p>export KE_HOME&#x3D;&#x2F;export&#x2F;server&#x2F;kafka-eagle</p>
+<p>export PATH&#x3D;$PATH:$KE_HOME&#x2F;bin</p>
+<p>（4） 配置 KafkaEagle</p>
+<p>cd &#x2F;export&#x2F;server&#x2F;kafka-eagle&#x2F;conf </p>
+<p>vi system-config.properties</p>
+<p>l 需要更改的地方：</p>
+<p>kafka.eagle.zk.cluster.alias&#x3D;cluster1</p>
+<p>cluster1.zk.list&#x3D;node1:2181,node2:2181,node3:2181</p>
+<p>cluster1.kafka.eagle.broker.size&#x3D;3</p>
+<p>kafka.eagle.url&#x3D;jdbc:sqlite:&#x2F;export&#x2F;data&#x2F;db&#x2F;ke.db</p>
+<p>l 启动前需要手动创建&#x2F;export&#x2F;data&#x2F;db目录</p>
+<p>mkdir &#x2F;export&#x2F;data&#x2F;db</p>
+<p>（5） 启动Eagle</p>
+<p>&#x2F;export&#x2F;server&#x2F;kafka-eagle&#x2F;bin&#x2F;ke.sh start</p>
+<p>（6） <strong>对Eagle中的各项功能进行学习，并上传至博客中。同时也需在实训设计文档中对相应内容进行说明</strong>。</p>
+<p><strong>项目三：使用<strong><strong>S</strong></strong>pring<strong><strong>B</strong></strong>oot搭建基础的Kafka流处理平台（必选）</strong></p>
+<p>1．项目来源及背景</p>
+<p>Kafka是目前主流的流处理平台，同时作为消息队列家族的一员，其高吞吐性作为很多场景下的主流选择。同时作为流处理平台，在大数据开发中，作为黏合剂串联各个系统。在本项目中，可以发布或订阅数据流处理系统，类似于消息队列数据流存储的平台，并且具备错误容忍当数据产生时就对数据进行处理。</p>
+<p>2．需求分析</p>
+<p>（1） 通过Github同步kafka_rgzn_Training仓库到本地</p>
+<p><a target="_blank" rel="noopener" href="https://github.com/skykip/kafka_rgzn_Training/tree/main/kafka_rgzn_Training">https://github.com/skykip/kafka_rgzn_Training/tree/main/kafka_rgzn_Training</a></p>
+<p>（2） 调试并启动项目，理解项目中共计11个代码文件的相应内容。</p>
+<p><img src="file:///C:\Users\雷神\AppData\Local\Temp\ksohtml9240\wps30.jpg" alt="img"> </p>
+<p>注：老师调试时使用的是jdk1.8.0_321</p>
+<p><img src="file:///C:\Users\雷神\AppData\Local\Temp\ksohtml9240\wps31.jpg" alt="img"> </p>
+<p>图1 项目结构</p>
+<p><strong>调试时，在<strong><strong>KafkaDemoApplication</strong></strong>文件内启动项目。使用postman等Http接口调试工具对项目进行测试。</strong></p>
+<p>A. <strong>测试时，使用get测试</strong><a target="_blank" rel="noopener" href="http://localhost:8080/kafka/send">**http://localhost:8080/kafka/**<strong>index</strong></a><strong>接口是否正常。发送相应的json数据。请截图Http接口调试工具中响应体的具体内容和项目运行界面的显示内容。如下图所示：</strong></p>
+<p><img src="file:///C:\Users\雷神\AppData\Local\Temp\ksohtml9240\wps32.jpg" alt="img"> </p>
+<p>图2 get响应体的具体内容</p>
+<p>B. <strong>测试时，使用post方式向</strong><a target="_blank" rel="noopener" href="http://localhost:8080/kafka/send"><strong>http://localhost:8080/kafka/send</strong></a><strong>接口发送json数据。</strong></p>
+<p><strong>样例数据如下（请在样例数据中改为自己的姓名和学号）：</strong></p>
+<p>**{“title”:”<strong><strong>bigdata</strong></strong>19-<strong><strong>kafka”</strong></strong>,”body”:”2022-06-05<strong><strong>，于智龙（学号）的kafka实训”</strong></strong>}**</p>
+<p><strong>请截图Http接口调试工具中响应体的具体内容和项目运行界面的显示内容。如下图所示：</strong></p>
+<p><img src="file:///C:\Users\雷神\AppData\Local\Temp\ksohtml9240\wps33.jpg" alt="img"> </p>
+<p>图2 post响应体的具体内容</p>
+<p><img src="file:///C:\Users\雷神\AppData\Local\Temp\ksohtml9240\wps34.jpg" alt="img"> </p>
+<p>图4 项目运行界面的显示内容</p>
+<p>（3） 在实训文档中编写上述代码的调试文档。</p>
+<p>要求：</p>
+<p>1） 说明该项目完成的主要功能</p>
+<p>2） 每个代码文件都要独立进行说明</p>
+<p>3） 说明每个代码文件的具体用途</p>
+<p>4） 对代码进行详细注释</p>
+<p><strong>二、设计要求</strong></p>
+<p>每个小组必须选择项目一，项目二与项目三，相同题目者设计报告不能雷同；</p>
+<p>2.课程设计报告要做到层次清晰，论述清楚，图表正确，书写工整；</p>
+<p>3.成绩根据平时、设计报告和答辩给定。</p>
+<p><strong>三．设计任务</strong></p>
+<p>1.使用Hexo + Github，选择主题，搭建个人博客。</p>
+<p>2.将kafka相应的配置内容作为博文在个人博客上进行发布。</p>
+<p>3.部署kafka-eagle运维监控系统，将部署方法和运维监控的相应内容写入博客，同时也在kafka实训设计文档中进行说明。</p>
+<p>4.使用SpringBoot搭建基础的Kafka流处理平台。</p>
+<p>5.对Kafka流处理平台进行相应测试，对各代码文件中各模块功能进行细致说明，对代码做详细注释。</p>
+<p>7.请同学们在设计时注意存储备份，以免机器故障、或其他误操作而丢失程序。</p>
+<p>8.在硬盘上建立自己的目录，将程序文件存储到该目录下，即有利于调试文件，又保证了文件的安全性。</p>
+<p><strong>四．设计参考资料</strong></p>
+<p>《Kafka权威指南》Neha Narkhede，Gwen Shapira，Todd Palino著，薛命灯 译、人民邮电出版社、2017年</p>
+<p><a target="_blank" rel="noopener" href="https://yelog.org/2017/03/23/3-hexo-instruction/">https://yelog.org/2017/03/23/3-hexo-instruction/</a></p>
+<p><a target="_blank" rel="noopener" href="https://yelog.org/2016/10/02/git-command/">https://yelog.org/2016/10/02/git-command/</a></p>
+<p><a target="_blank" rel="noopener" href="https://wiki.zthxxx.me/wiki/index/">https://wiki.zthxxx.me/wiki/index/</a></p>
+<p><a target="_blank" rel="noopener" href="https://ohlia.github.io/Wiki-site/wiki/Hexo/build-blog-by-hexo/">https://ohlia.github.io/Wiki-site/wiki/Hexo/build-blog-by-hexo/</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2022/06/11/Kafka%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA-1/" data-id="cl49e8pfh0000z4w2epzxcova" data-title="Kafka环境搭建" class="article-share-link">Share</a>
+      
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2022/06/11/Kafka%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title"></div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        <aside id="sidebar">
+  
+    
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2022/06/11/Kafka%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA-1/">Kafka环境搭建</a>
+          </li>
+        
+          <li>
+            <a href="/2022/06/11/Kafka%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2022/05/23/spark%E6%90%AD%E5%BB%BA/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2022/05/17/hello-world/">Hello World</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+    
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/06/">June 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/05/">May 2022</a></li></ul>
+    </div>
+  </div>
+
+  
+</aside>
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2022 By Autoload<br>
+      Driven - <a href="https://hexo.io/" target="_blank">Hexo</a>|Theme - <a href="https://github.com/autoload/hexo-theme-auto" target="_blank">Auto</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+    <a href="/categories" class="mobile-nav-link">Categories</a>
+  
+    <a href="/tags" class="mobile-nav-link">Tags</a>
+  
+    <a href="/about" class="mobile-nav-link">About</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.4.1.min.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+  </div>
+</body>
+</html>
